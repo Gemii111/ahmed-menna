@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>AHMED &amp; MENNA WEDDING INVITATION | دعوة زفاف أحمد ومنة</title>
+  
+  <meta name="description" content="دعوة زفاف أحمد ومنة - 18 أكتوبر - قاعة مشاعل دكرنس">
+  <meta property="og:title" content="AHMED &amp; MENNA WEDDING INVITATION">
+  <meta property="og:description" content="دعوة زفاف أحمد ومنة - 18 أكتوبر - قاعة مشاعل دكرنس">
+  <meta property="og:image" content="_assets/media/d1821bd4ef4d417d29c66c9b7b727476.png">
+  <meta property="og:type" content="website">
+
+  <link rel="shortcut icon" href="_assets/images/2d0b56e7e51cf11036ad8734bdb67e2d.png">
+  <link rel="icon" href="_assets/images/e53c4bd8da5e491d9ab09e7cf0daf874.png" sizes="192x192">
+  <link rel="apple-touch-icon" href="_assets/images/725b756a69a7d4c235070e51acd85560.png" sizes="180x180">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Audio Element -->
+  <audio id="wedding-audio" src="_assets/music/a_thousand_years.mp3" preload="auto" loop></audio>
+
+  <!-- Confetti Canvas -->
+  <canvas id="confetti-canvas"></canvas>
+
+  <!-- Floating Music Toggle Button -->
+  <button id="floating-music-btn" class="floating-music-btn" aria-label="Toggle Music" title="تشغيل / إيقاف الموسيقى">
+    <!-- Note Icon -->
+    <svg class="music-note-icon" viewBox="0 0 58.08 58.55">
+      <path d="M57.17.64c-.58-.5-1.34-.73-2.1-.62L18.15,5.3c-1.3.19-2.26,1.3-2.26,2.61v30.91c-1.56-.91-3.37-1.43-5.31-1.43-5.83,0-10.58,4.75-10.58,10.58s4.75,10.58,10.58,10.58,10.58-4.75,10.58-10.58v-27.23l31.64-4.52v17.33c-1.56-.91-3.37-1.43-5.31-1.43-5.83,0-10.58,4.75-10.58,10.58s4.75,10.58,10.58,10.58,10.58-4.75,10.58-10.58V2.64c0-.76-.33-1.49-.91-1.99Z"/>
+    </svg>
+    <!-- Pause Icon -->
+    <svg class="music-pause-icon" style="display:none;" viewBox="0 0 100 100">
+      <rect x="28" y="20" width="16" height="60" rx="4"/>
+      <rect x="56" y="20" width="16" height="60" rx="4"/>
+    </svg>
+    <!-- Play Icon -->
+    <svg class="music-play-icon" style="display:none;" viewBox="0 0 100 100">
+      <polygon points="30,20 30,80 75,50"/>
+    </svg>
+  </button>
+
+  <!-- =========================================================================
+       1. ENVELOPE OPENING OVERLAY SCREEN
+       ========================================================================= -->
+  <div id="envelope-overlay" class="envelope-overlay">
+    <div id="envelope-container" class="envelope-container">
+      <!-- Upper triangular flap with embossed pattern -->
+      <div class="envelope-ornament-top"></div>
+
+      <!-- Lower envelope pocket -->
+      <div class="envelope-pocket"></div>
+
+      <!-- Wax Seal Interactive Button -->
+      <div id="wax-seal-btn" class="wax-seal-wrapper" role="button" tabindex="0" aria-label="Open Invitation">
+        <img class="wax-seal-img" src="_assets/media/c6a907187fa25adff27e6a7b2d0b725c.png" alt="Golden Seal">
+        <div class="seal-text">CLICK TO OPEN</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       MAIN INVITATION CARD WRAPPER
+       ========================================================================= -->
+  <main class="invitation-wrapper" id="invitation-content">
+
+    <!-- =======================================================================
+         HERO SECTION: Gazebo & Names
+         ======================================================================= -->
+    <section class="hero-section" id="hero-section">
+      <div class="hero-overlay"></div>
+
+      <!-- Top Header Music Trigger -->
+      <div class="hero-content">
+        <div class="play-music-badge" role="button" tabindex="0">
+          <span class="play-music-curved">PLAY MUSIC</span>
+          <div class="music-badge-icon">
+            <svg viewBox="0 0 58.08 58.55">
+              <path d="M57.17.64c-.58-.5-1.34-.73-2.1-.62L18.15,5.3c-1.3.19-2.26,1.3-2.26,2.61v30.91c-1.56-.91-3.37-1.43-5.31-1.43-5.83,0-10.58,4.75-10.58,10.58s4.75,10.58,10.58,10.58,10.58-4.75,10.58-10.58v-27.23l31.64-4.52v17.33c-1.56-.91-3.37-1.43-5.31-1.43-5.83,0-10.58,4.75-10.58,10.58s4.75,10.58,10.58,10.58,10.58-4.75,10.58-10.58V2.64c0-.76-.33-1.49-.91-1.99Z"/>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Couple Names -->
+        <div class="couple-names-wrap" dir="ltr">
+          <h1 class="name-groom">Ahmed</h1>
+          <div class="ampersand">&amp;</div>
+          <h2 class="name-bride">Menna</h2>
+        </div>
+      </div>
+
+      <!-- Hero Bottom Badges & Scroll Button -->
+      <div class="hero-details">
+        <div class="arabic-together">إلى الأبد معا</div>
+        <div class="english-together">FOREVER TOGETHER</div>
+        <div class="wedding-date-hero" dir="ltr">18 OCTOBER 2026</div>
+
+        <div id="scroll-down-btn" class="scroll-down-wrap" role="button" tabindex="0">
+          <svg class="scroll-down-icon" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+          <span class="scroll-down-text">SCROLL DOWN</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         SECTION 2: Countdown Timer
+         ======================================================================= -->
+    <section class="section countdown-section" id="countdown-section">
+      <h2 class="section-title">Countdown</h2>
+
+      <div class="countdown-grid" dir="ltr">
+        <div class="countdown-card">
+          <div class="countdown-number" id="days-count">00</div>
+          <div class="countdown-label">DAYS</div>
+        </div>
+        <div class="countdown-colon">:</div>
+
+        <div class="countdown-card">
+          <div class="countdown-number" id="hours-count">00</div>
+          <div class="countdown-label">HOURS</div>
+        </div>
+        <div class="countdown-colon">:</div>
+
+        <div class="countdown-card">
+          <div class="countdown-number" id="minutes-count">00</div>
+          <div class="countdown-label">MINUTES</div>
+        </div>
+        <div class="countdown-colon">:</div>
+
+        <div class="countdown-card">
+          <div class="countdown-number" id="seconds-count">00</div>
+          <div class="countdown-label">SECONDS</div>
+        </div>
+      </div>
+    </section>
+
+    <img class="floral-divider" src="_assets/media/floral_divider_clean.png" alt="Divider">
+
+    <!-- =======================================================================
+         SECTION 3: Welcome Message
+         ======================================================================= -->
+    <section class="section welcome-section" id="welcome-section">
+      <h2 class="section-title" dir="ltr">Welcome !</h2>
+      <p class="welcome-paragraph" dir="ltr">
+        From the very first moment, we knew our story was meant to be celebrated. 
+        We would be honoured to have you with us as we begin this new chapter — surrounded by the people we love most.
+      </p>
+    </section>
+
+    <img class="floral-divider" src="_assets/media/floral_divider_clean.png" alt="Divider">
+
+    <!-- =======================================================================
+         SECTION 4: When & Where
+         ======================================================================= -->
+    <section class="section when-where-section" id="when-where-section">
+      <h2 class="section-title">When &amp; Where</h2>
+
+      <div class="timeline-hours" dir="ltr">
+        <div class="time-block">
+          <span class="time-val">7 PM</span>
+          <span class="time-sub">STARTS</span>
+        </div>
+
+        <img class="time-divider-img" src="_assets/media/cc5b43bd053a9a9473c1d2ac5578d777.png" alt="Timeline divider">
+
+        <div class="time-block">
+          <span class="time-val">1 AM</span>
+          <span class="time-sub">ENDS</span>
+        </div>
+      </div>
+    </section>
+
+    <img class="floral-divider" src="_assets/media/floral_divider_clean.png" alt="Divider">
+
+    <!-- =======================================================================
+         SECTION 5: Venue & Location Map
+         ======================================================================= -->
+    <section class="section venue-section" id="venue-section">
+      <div class="venue-header-tag">VENUE</div>
+      <div class="venue-name">قاعة مشاعل</div>
+      <div class="venue-location">دكرنس - محافظة الدقهلية</div>
+
+      <!-- Google Maps Button -->
+      <a class="maps-btn" href="https://www.google.com/maps/search/?api=1&query=%D9%82%D8%A7%D8%B9%D8%A9+%D9%85%D8%B4%D8%A7%D8%B9%D9%84+%D8%AF%D9%83%D8%D8%B1%D9%86%D8%B3" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24">
+          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+        </svg>
+        <span>Google Maps</span>
+      </a>
+
+      <!-- Interactive Map Frame -->
+      <div class="map-embed-container">
+        <iframe 
+          title="Mashael Hall Location"
+          src="https://maps.google.com/maps?q=%D9%82%D8%A7%D8%B9%D8%A9+%D9%85%D8%B4%D8%A7%D8%B9%D9%84+%D8%AF%D9%83%D8%D8%B1%D9%86%D8%B3&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+          loading="lazy" 
+          allowfullscreen>
+        </iframe>
+      </div>
+    </section>
+
+    <img class="floral-divider" src="_assets/media/floral_divider_clean.png" alt="Divider">
+
+    <!-- =======================================================================
+         SECTION 6: Order of the Day
+         ======================================================================= -->
+    <section class="section schedule-section" id="schedule-section">
+      <h2 class="section-title">Order of the Day</h2>
+      <div class="section-subtitle">WHAT WE HAVE PLANNED FOR YOU</div>
+
+      <div class="schedule-timeline" dir="ltr">
+        <!-- Item 1 -->
+        <div class="schedule-item">
+          <div class="schedule-time">7:00 PM</div>
+          <div class="schedule-title">RECEPTION</div>
+          <div class="schedule-desc">WELCOME DRINKS &amp; GUEST ARRIVAL</div>
+        </div>
+        <div class="schedule-divider-line"></div>
+
+        <!-- Item 2 -->
+        <div class="schedule-item">
+          <div class="schedule-time">8:00 PM</div>
+          <div class="schedule-title">MARRIAGE CEREMONY</div>
+        </div>
+        <div class="schedule-divider-line"></div>
+
+        <!-- Item 3 -->
+        <div class="schedule-item">
+          <div class="schedule-time">9:00 PM</div>
+          <div class="schedule-title">ZAFFA &amp; ENTERTAINMENT</div>
+        </div>
+        <div class="schedule-divider-line"></div>
+
+        <!-- Item 4 -->
+        <div class="schedule-item">
+          <div class="schedule-time">10:00 PM</div>
+          <div class="schedule-title">DINNER &amp; CELEBRATION</div>
+        </div>
+        <div class="schedule-divider-line"></div>
+
+        <!-- Item 5 -->
+        <div class="schedule-item">
+          <div class="schedule-time">11:00 PM</div>
+          <div class="schedule-title">PARTY &amp; ENTERTAINMENT</div>
+        </div>
+      </div>
+    </section>
+
+    <img class="floral-divider" src="_assets/media/floral_divider_clean.png" alt="Divider">
+
+    <!-- =======================================================================
+         SECTION 7: Gifts
+         ======================================================================= -->
+    <section class="section gifts-section" id="gifts-section">
+      <div class="gift-card">
+        <h2 class="gift-card-title">Gifts</h2>
+        <div class="gift-card-text" dir="ltr">
+          YOUR PRESENCE IS THE GREATEST GIFT<br>WE COULD RECEIVE .
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         SECTION 8: Leave A Message / Guestbook
+         ======================================================================= -->
+    <section class="section guestbook-section" id="guestbook-section">
+      <h2 class="section-title">Leave A Message</h2>
+      <div class="section-subtitle" dir="ltr">
+        SHARE YOUR LOVE , WISHES , OR A NOTE<br>FOR THE HAPPY COUPLE !
+      </div>
+
+      <div class="guestbook-form-card">
+        <form id="guestbook-form">
+          <div class="form-group">
+            <label class="form-label" for="guest-name">الاسم الكريم :</label>
+            <input type="text" id="guest-name" class="form-input" placeholder="اكتب اسمك هنا..." required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="guest-msg">رسالتك وتهنئتك للعروسين :</label>
+            <textarea id="guest-msg" class="form-textarea" placeholder="أجمل التهاني والتبريكات..." required></textarea>
+          </div>
+
+          <button type="submit" class="btn-submit">
+            <span>إرسال التهنئة</span>
+            <span>💌</span>
+          </button>
+        </form>
+      </div>
+
+      <!-- Messages Wall -->
+      <div class="messages-wall" id="messages-wall">
+        <!-- Rendered dynamically -->
+      </div>
+    </section>
+
+    <img class="floral-divider" src="_assets/media/floral_divider_clean.png" alt="Divider">
+
+    <!-- =======================================================================
+         SECTION 9: Footer
+         ======================================================================= -->
+    <footer class="invitation-footer">
+      <div class="footer-brand">DESIGNED BY TDESIGNATION</div>
+
+      <div class="footer-socials">
+        <!-- WhatsApp -->
+        <a class="footer-social-link" href="https://wa.me/" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+          <svg viewBox="0 0 24 24">
+            <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2zm5.83 14.19c-.24.67-1.39 1.28-1.92 1.36-.51.08-1.15.11-3.32-.78-2.67-1.1-4.4-3.8-4.53-3.98-.13-.18-1.08-1.44-1.08-2.75 0-1.31.69-1.95.93-2.22.24-.27.53-.34.71-.34.18 0 .36 0 .51.01.16.01.38-.06.59.45.22.53.75 1.83.82 1.97.07.13.11.29.02.47-.09.18-.13.29-.27.45-.13.16-.29.35-.41.47-.13.13-.27.27-.12.53.16.27.69 1.14 1.48 1.85 1.02.91 1.88 1.19 2.15 1.32.27.13.42.11.58-.07.16-.18.67-.78.85-1.04.18-.27.36-.22.6-.13.24.09 1.53.72 1.79.85.27.13.44.2.51.31.07.11.07.65-.17 1.32z"/>
+          </svg>
+        </a>
+        <!-- Globe -->
+        <a class="footer-social-link" href="#" aria-label="Website">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+          </svg>
+        </a>
+        <!-- Facebook -->
+        <a class="footer-social-link" href="#" aria-label="Facebook">
+          <svg viewBox="0 0 24 24">
+            <path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"/>
+          </svg>
+        </a>
+        <!-- Instagram -->
+        <a class="footer-social-link" href="#" aria-label="Instagram">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+          </svg>
+        </a>
+      </div>
+
+      <div class="footer-copyright">
+        &copy; 2026 T Designation . all rights reserved
+      </div>
+    </footer>
+
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
