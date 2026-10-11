@@ -1,0 +1,18 @@
+{
+  "name": "ahmed-menna-invitation",
+  "version": "1.0.0",
+  "description": "Wedding Invitation - Ahmed & Menna",
+  "main": "index.html",
+  "scripts": {
+    "build": "node build.js",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "wedding",
+    "invitation",
+    "ahmed",
+    "menna"
+  ],
+  "author": "Gemii111",
+  "license": "ISC"
+}

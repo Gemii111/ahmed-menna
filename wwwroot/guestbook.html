@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    @font-face {
+      font-family: 'DetailTextFont';
+      src: url('_assets/fonts/8fbba774c32932015ba2a54d5bcbd180.woff') format('woff');
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      width: 100%; height: 100%;
+      background: transparent !important;
+      font-family: 'DetailTextFont', -apple-system, sans-serif;
+      color: #5d2c24;
+      padding: 10px;
+    }
+    .card {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 20px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+      border: 1px solid #dcdfc4;
+      max-width: 450px;
+      margin: 0 auto 20px;
+    }
+    .label {
+      display: block; font-size: 14px; font-weight: 700;
+      margin-bottom: 6px; text-align: right;
+    }
+    .input, .textarea {
+      width: 100%; padding: 10px 14px; border-radius: 8px;
+      border: 1.5px solid #d4d7be; font-family: inherit; font-size: 14px;
+      margin-bottom: 12px; outline: none; background: #fafaf5;
+      text-align: right;
+    }
+    .input:focus, .textarea:focus { border-color: #5d2c24; }
+    .textarea { resize: vertical; min-height: 80px; }
+    .btn {
+      width: 100%; padding: 12px; background: #5d2c24; color: #fff;
+      border: none; border-radius: 25px; font-size: 14px; font-weight: 700;
+      cursor: pointer; transition: background 0.2s;
+    }
+    .btn:hover { background: #441e18; }
+    .wishes {
+      display: flex; flex-direction: column; gap: 10px;
+      max-width: 450px; margin: 0 auto;
+    }
+    .wish {
+      background: #fafaf5; padding: 12px 16px; border-radius: 10px;
+      border-right: 4px solid #5d2c24; font-size: 13px; text-align: right;
+    }
+    .wish-author { font-weight: 700; color: #5d2c24; margin-bottom: 4px; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <form id="msg-form">
+      <label class="label">الاسم الكريم :</label>
+      <input type="text" id="uname" class="input" placeholder="اسمك الكريم..." required>
+      <label class="label">رسالتك وتهنئتك للعروسين :</label>
+      <textarea id="utext" class="textarea" placeholder="أجمل التهاني للعروسين أحمد ومنة..." required></textarea>
+      <button type="submit" class="btn" id="sbtn">إرسال التهنئة 💌</button>
+    </form>
+  </div>
+
+  <div class="wishes" id="wlist">
+    <div class="wish">
+      <div class="wish-author">❤️ خالد الشربيني</div>
+      <div>ألف مبروك لأحلى عرسان أحمد ومنة، بارك الله لكما وبارك عليكما وجمع بينكما في خير!</div>
+    </div>
+    <div class="wish">
+      <div class="wish-author">❤️ عائلة المحمدي</div>
+      <div>أجمل التهاني القلبية لأحمد ومنة، فرحتكم فرحتنا جميعاً في دكرنس!</div>
+    </div>
+  </div>
+
+  <script>
+    var form = document.getElementById('msg-form');
+    var wlist = document.getElementById('wlist');
+    form.onsubmit = function(e) {
+      e.preventDefault();
+      var name = document.getElementById('uname').value;
+      var text = document.getElementById('utext').value;
+      var div = document.createElement('div');
+      div.className = 'wish';
+      div.innerHTML = '<div class="wish-author">❤️ ' + name + '</div><div>' + text + '</div>';
+      wlist.insertBefore(div, wlist.firstChild);
+      form.reset();
+      document.getElementById('sbtn').textContent = 'تم الإرسال بنجاح! ❤️';
+      setTimeout(function() { document.getElementById('sbtn').textContent = 'إرسال التهنئة 💌'; }, 2500);
+    };
+  </script>
+</body>
+</html>
